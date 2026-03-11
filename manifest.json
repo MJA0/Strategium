@@ -1,0 +1,18 @@
+{
+  "name": "Strategium",
+  "short_name": "Strategium",
+  "description": "Warhammer 40,000 roster builder and tabletop companion",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#040d08",
+  "theme_color": "#040d08",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
