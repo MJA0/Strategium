@@ -9,13 +9,59 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#040d08" />
-    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <title>STRATEGIUM</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
+      html, body {
+        background: #07070a;
+        margin: 0;
+      }
+      .faction-admech { background: #1c1010 !important; }
+      .faction-aeldari { background: #08060e !important; }
+      .faction-astra-militarum { background: #090a06 !important; }
+      .faction-black-templars { background: #080706 !important; }
+      .faction-blood-angels { background: #1e0a0a !important; }
+      .faction-chaos-knights { background: #0a0604 !important; }
+      .faction-codex { background: #080a0c !important; }
+      .faction-csm { background: #100608 !important; }
+      .faction-custodes { background: #130d02 !important; }
+      .faction-daemons { background: #0e0614 !important; }
+      .faction-dark-angels { background: #040c06 !important; }
+      .faction-death-guard { background: #141c0a !important; }
+      .faction-deathwatch { background: #080808 !important; }
+      .faction-drukhari { background: #060608 !important; }
+      .faction-emp-children { background: #1a0e1e !important; }
+      .faction-grey-knights { background: #dce0e8 !important; }
+      .faction-gsc { background: #090a0c !important; }
+      .faction-imp-knights { background: #090a0c !important; }
+      .faction-necrons { background: #040a06 !important; }
+      .faction-orks { background: #101c08 !important; }
+      .faction-sororitas { background: #0a0608 !important; }
+      .faction-space-wolves { background: #2a3c48 !important; }
+      .faction-tau { background: #e8f8f8 !important; }
+      .faction-thousand-sons { background: #02090c !important; }
+      .faction-tyranids { background: #070408 !important; }
+      .faction-ultramarines { background: #030810 !important; }
+      .faction-votann { background: #060808 !important; }
+      .faction-world-eaters { background: #1e0808 !important; }
+      .theme-eldar { background: #040c0e !important; }
+      .theme-grimdark { background: #040d08 !important; }
+      .theme-mechanicus { background: #100606 !important; }
+      .theme-necron { background: #020408 !important; }
+      .theme-nurgle { background: #080c04 !important; }
+      .faction-imperial-fists { background: #181400 !important; }
+      .faction-iron-hands { background: #080a0a !important; }
+      .faction-salamanders { background: #101808 !important; }
+      .faction-raven-guard { background: #080808 !important; }
+      .faction-white-scars { background: #f4f4f4 !important; }
+      .faction-iron-warriors { background: #242424 !important; }
+      .faction-alpha-legion { background: #0e1820 !important; }
+      .faction-night-lords { background: #04060e !important; }
+      .faction-word-bearers { background: #0c0404 !important; }
+      .faction-black-legion { background: #020204 !important; }
       .skip-to-content {
         position: absolute;
         left: -9999px;
@@ -40,8 +86,18 @@
         text-decoration: none;
       }
     </style>
-    <script type="module" crossorigin src="/Strategium/assets/index-C5ZoIN-d.js"></script>
-    <link rel="stylesheet" crossorigin href="/Strategium/assets/index-KEYKJfHF.css">
+    <script>
+      // Restore theme bg colour before first paint to avoid white flash
+      try {
+        var t = localStorage.getItem('strategium-theme');
+        if (t) {
+          var el = document.documentElement;
+          el.classList.add(t);
+        }
+      } catch(e) {}
+    </script>
+    <script type="module" crossorigin src="/Strategium/assets/index-CKQIDkFF.js"></script>
+    <link rel="stylesheet" crossorigin href="/Strategium/assets/index-B7BXMPi8.css">
   <link rel="manifest" href="/Strategium/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/Strategium/registerSW.js"></script></head>
   <body>
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
